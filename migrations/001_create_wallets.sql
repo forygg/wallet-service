@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS wallets (
+    id UUID PRIMARY KEY,
+    balance DECIMAL(15,2) NOT NULL DEFAULT 0,
+    version INTEGER NOT NULL DEFAULT 1,
+);
+
+CREATE INDEX IF NOT EXISTS idx_wallets_id ON wallets(id);
